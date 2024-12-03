@@ -48,68 +48,54 @@ overlay[0].addEventListener("click", testimonialsModalHideFunc);
 
 
 
+// Onclick event for portfolio filter (large screen)
 
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+let lastClickedBtn = $(".portfolio-filter-btn.active"); 
+// when we back in portfolio last tab should be open 
+//ex: if last we open web design page from portfolio and go to the resume and again click on portfolio its show web development on all.
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
+function PortfolioFilter($this){
+    let selectedValue = $this.innerText.toLowerCase();
+    selectedValue.innerText=$this.innerText;
     filterFunc(selectedValue);
 
-  });
+    $(".portfolio-filter-btn.active").removeClass("active");
+    $($this).addClass("active");
+    //lastClickedBtn.removeClass("active");
+    //$($this).classList.add("active");
+    lastClickedBtn = $(".portfolio-filter-btn.active")
+
 }
-function AddClickEvent(){
-    console.log(this.innerText.toLowerCase());
+
+// portfolio filter (mobile screen)
+const select = document.querySelector("[data-select]");
+select.addEventListener("click", function () { elementToggleFunc(this); });
+const selectValue = $(".filter-select-box .select-value");
+
+function PortfolioFilter1($this){
+    let selectedValue = $this.innerText.toLowerCase();
+    selectValue.innerText=$this.innerText;
+    filterFunc(selectedValue);
+    elementToggleFunc(select);
 }
+
+
+
 
 // filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
 function filterFunc(selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
+  $(".project-item").each(function(){
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
+        $(this).addClass("active");
+      } 
+      else if (selectedValue === $(this).attr("data-category")) {
+        $(this).addClass("active");
+      } 
+      else {
+        $(this).removeClass("active");
+      }
+  })
 }
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
 
 
 // contact form variables

@@ -133,7 +133,8 @@
                     </header>          
                     <section class="about-text">
                         <p>
-                        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+                        I'm student of software development program in vanier college, Montreal, Canda.
+                        Fresher in web development.
                         I enjoy
                         turning complex problems into simple, beautiful and intuitive designs.
                         </p>
@@ -446,6 +447,42 @@
                                   <div class="skill-progress-fill" style="width: 70%;"></div>
                                 </div>
                   
+                            </li>]
+                            <li class="skills-item">
+
+                                <div class="title-wrapper">
+                                  <h5 class="h5">bootstrap</h5>
+                                  <data value="70">70%</data>
+                                </div>
+                  
+                                <div class="skill-progress-bg">
+                                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                                </div>
+                  
+                            </li>
+                            <li class="skills-item">
+
+                                <div class="title-wrapper">
+                                  <h5 class="h5">JavScipt</h5>
+                                  <data value="50">50%</data>
+                                </div>
+                  
+                                <div class="skill-progress-bg">
+                                  <div class="skill-progress-fill" style="width: 50%;"></div>
+                                </div>
+                  
+                            </li>
+                            <li class="skills-item">
+
+                                <div class="title-wrapper">
+                                  <h5 class="h5">jQuery</h5>
+                                  <data value="70">70%</data>
+                                </div>
+                  
+                                <div class="skill-progress-bg">
+                                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                                </div>
+                  
                             </li>
                   
                             <li class="skills-item">
@@ -492,19 +529,15 @@
                       <ul class="filter-list">
             
                         <li class="filter-item">
-                          <button class="active" data-filter-btn>All</button>
+                          <button class="active portfolio-filter-btn" onclick="PortfolioFilter(this)">All</button>
                         </li>
             
                         <li class="filter-item">
-                          <button data-filter-btn>Web design</button>
+                          <button class="portfolio-filter-btn" onclick="PortfolioFilter(this)">Web design</button>
                         </li>
             
                         <li class="filter-item">
-                          <button data-filter-btn>Applications</button>
-                        </li>
-            
-                        <li class="filter-item">
-                          <button data-filter-btn>Web development</button>
+                          <button class="portfolio-filter-btn" onclick="PortfolioFilter(this)">Web development</button>
                         </li>
             
                       </ul>
@@ -524,19 +557,15 @@
                         <ul class="select-list">
             
                           <li class="select-item">
-                            <button data-select-item onclick="AddClickEvent()">All</button>
+                            <button onclick="PortfolioFilter1(this)">All</button>
                           </li>
             
                           <li class="select-item">
-                            <button data-select-item onclick="AddClickEvent()">Web design</button>
+                            <button data-select-item onclick="PortfolioFilter1(this)">Web design</button>
                           </li>
             
                           <li class="select-item">
-                            <button data-select-item onclick="AddClickEvent()">Applications</button>
-                          </li>
-            
-                          <li class="select-item">
-                            <button data-select-item>Web development</button>
+                            <button data-select-item onclick="PortfolioFilter1(this)">Web development</button>
                           </li>
             
                         </ul>
@@ -545,6 +574,24 @@
             
                       <ul class="project-list">
             
+                        <li class="project-item  active" data-filter-item data-category="web design">
+                          <a href="#">
+            
+                            <figure class="project-img">
+                              <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                              </div>
+            
+                              <img src="./images/project-1.png" alt="finance" loading="lazy">
+                            </figure>
+            
+                            <h3 class="project-title">Crypto</h3>
+            
+                            <p class="project-category">Web Design</p>
+            
+                          </a>
+                        </li>
+            
                         <li class="project-item  active" data-filter-item data-category="web development">
                           <a href="#">
             
@@ -553,10 +600,10 @@
                                 <ion-icon name="eye-outline"></ion-icon>
                               </div>
             
-                              <img src="./images/project-1.jpg" alt="finance" loading="lazy">
+                              <img src="./images/project-2.png" alt="food delivery" loading="lazy">
                             </figure>
             
-                            <h3 class="project-title">Finance</h3>
+                            <h3 class="project-title">Food Delivery</h3>
             
                             <p class="project-category">Web development</p>
             
@@ -571,10 +618,10 @@
                                 <ion-icon name="eye-outline"></ion-icon>
                               </div>
             
-                              <img src="./images/project-2.png" alt="orizon" loading="lazy">
+                              <img src="./images/project-3.png" alt="EmbFile" loading="lazy">
                             </figure>
             
-                            <h3 class="project-title">Orizon</h3>
+                            <h3 class="project-title">EmbFile</h3>
             
                             <p class="project-category">Web development</p>
             
@@ -589,123 +636,16 @@
                                 <ion-icon name="eye-outline"></ion-icon>
                               </div>
             
-                              <img src="./images/project-3.jpg" alt="fundo" loading="lazy">
+                              <img src="./images/project-4.png" alt="tindog" loading="lazy">
                             </figure>
             
-                            <h3 class="project-title">Fundo</h3>
+                            <h3 class="project-title">Tindog</h3>
             
-                            <p class="project-category">Web design</p>
+                            <p class="project-category">Web Design</p>
             
                           </a>
                         </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="applications">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-4.png" alt="brawlhalla" loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">Brawlhalla</h3>
-            
-                            <p class="project-category">Applications</p>
-            
-                          </a>
-                        </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="web design">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-5.png" alt="dsm." loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">DSM.</h3>
-            
-                            <p class="project-category">Web design</p>
-            
-                          </a>
-                        </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="web design">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-6.png" alt="metaspark" loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">MetaSpark</h3>
-            
-                            <p class="project-category">Web design</p>
-            
-                          </a>
-                        </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="web development">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-7.png" alt="summary" loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">Summary</h3>
-            
-                            <p class="project-category">Web development</p>
-            
-                          </a>
-                        </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="applications">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-8.jpg" alt="task manager" loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">Task Manager</h3>
-            
-                            <p class="project-category">Applications</p>
-            
-                          </a>
-                        </li>
-            
-                        <li class="project-item  active" data-filter-item data-category="web development">
-                          <a href="#">
-            
-                            <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                              </div>
-            
-                              <img src="./images/project-9.png" alt="arrival" loading="lazy">
-                            </figure>
-            
-                            <h3 class="project-title">Arrival</h3>
-            
-                            <p class="project-category">Web development</p>
-            
-                          </a>
-                        </li>
+
             
                       </ul>
             
